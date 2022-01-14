@@ -4,6 +4,6 @@ export class Candidate {
     id!: string;
     name!: string;
     interests!: string;
-    linkedinprofileurl!:number;
+    linkedinProfileURL!: string;
     skills! : Skill[];
 }

@@ -8,19 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CandidateServiceService {
   candidatesUrl: string;
- // http!: HttpClient;
-
+ 
   constructor(private http: HttpClient) { 
       this.candidatesUrl = 'http://localhost:8080/candidates';
   }
 
   public findAll(): Observable<Candidate[]> {
-
-    //var object = this.http.get(this.candidatesUrl);
-    //localcandidates: Candidate[] = [];
-    //var object1 = this.http.get<Candidate[]>(this.candidatesUrl);
-  
-
     return this.http.get<Candidate[]>(this.candidatesUrl);
   }
 

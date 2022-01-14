@@ -22,14 +22,14 @@
         <div [hidden]="!interests.pristine" class="alert alert-danger">Interests are required</div>
       </div>
       <div class="form-group">
-        <label for="linkedinprofileurl">Linkedin profile URL</label>
-        <input type="text" [(ngModel)]="candidate.linkedinprofileurl" 
+        <label for="linkedinProfileURL">Linkedin profile URL</label>
+        <input type="text" [(ngModel)]="candidate.linkedinProfileURL" 
           class="form-control" 
-          id="linkedinprofileurl" 
-          name="linkedinprofileurl" 
+          id="linkedinProfileURL" 
+          name="linkedinProfileURL" 
           placeholder="Enter your linkedin profile URL"
-          required #linkedinprofileurl="ngModel">
-        <div [hidden]="!linkedinprofileurl.pristine" class="alert alert-danger">Linkedin profile URL is required</div>
+          required #linkedinProfileURL="ngModel">
+        <div [hidden]="!linkedinProfileURL.pristine" class="alert alert-danger">Linkedin profile URL is required</div>
       </div>
       <button type="submit" [disabled]="!candidateForm.form.valid" 
         class="btn btn-info">Submit</button>

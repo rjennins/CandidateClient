@@ -18,6 +18,5 @@ export class CandidateListComponent implements OnInit {
     this.candidateService.findAll().subscribe((data: Candidate[]) => {
       this.candidates = data;
     });
-    console.log("test");
   }
 }
