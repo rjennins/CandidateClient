@@ -1,0 +1,38 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #candidateForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="candidate.name" 
+          class="form-control" 
+          id="name" 
+          name="name" 
+          placeholder="Enter your name"
+          required #name="ngModel">
+      </div>
+      <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+      <div class="form-group">
+        <label for="interests">Interests</label>
+        <input type="text" [(ngModel)]="candidate.interests" 
+          class="form-control" 
+          id="interests" 
+          name="interests" 
+          placeholder="Enter your interests"
+          required #interests="ngModel">
+        <div [hidden]="!interests.pristine" class="alert alert-danger">Interests are required</div>
+      </div>
+      <div class="form-group">
+        <label for="linkedinprofileurl">Linkedin profile URL</label>
+        <input type="text" [(ngModel)]="candidate.linkedinprofileurl" 
+          class="form-control" 
+          id="linkedinprofileurl" 
+          name="linkedinprofileurl" 
+          placeholder="Enter your linkedin profile URL"
+          required #linkedinprofileurl="ngModel">
+        <div [hidden]="!linkedinprofileurl.pristine" class="alert alert-danger">Linkedin profile URL is required</div>
+      </div>
+      <button type="submit" [disabled]="!candidateForm.form.valid" 
+        class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
